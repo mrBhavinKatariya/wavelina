@@ -5,7 +5,7 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-cream-50">
       {/* Hero Section */}
-      <section className="relative  bg-gradient-to-b from-gold-500 to-gold-700">
+      <section className="relative bg-gradient-to-b from-gold-500 to-gold-700">
         <div className="container mx-auto px-4 text-center">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
