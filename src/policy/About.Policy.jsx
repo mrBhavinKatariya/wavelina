@@ -13,9 +13,9 @@ const AboutUs = () => {
   ];
 
   const craftStats = [
-    { id: 1, value: '200+', label: 'Skilled Artisans' },
-    { id: 2, value: '10M+', label: 'Pieces Created' },
-    { id: 3, value: '50+', label: 'Award-Winning Designs' },
+    { id: 1, value: '100+', label: 'Skilled Artisans' },
+    { id: 2, value: '2M+', label: 'Pieces Created' },
+    { id: 3, value: '5+', label: 'Award-Winning Designs' },
   ];
 
   return (
@@ -87,7 +87,7 @@ const AboutUs = () => {
                 Our Heritage
               </h2>
               <p className="text-gray-600 mb-6">
-                Established in 2002, BBAZAAR Jewellery has redefined India's fashion jewellery landscape 
+                Established in 2002, WAVELINA Jewellery has redefined India's fashion jewellery landscape 
                 through unparalleled craftsmanship and accessible luxury. As the nation's largest 
                 jewellery destination, we blend traditional artistry with contemporary design.
               </p>
@@ -118,7 +118,7 @@ const AboutUs = () => {
           >
             <SparklesIcon className="h-16 w-16 text-gold-700 mx-auto mb-8" />
             <h2 className="text-3xl font-cinzel font-bold text-gray-800 mb-12">
-              The BBAZAAR Difference
+              The WAVELINA Difference
             </h2>
           </motion.div>
 
@@ -155,7 +155,7 @@ const AboutUs = () => {
               </h3>
               <p className="text-gray-600 leading-relaxed mb-8">
                 We champion India's rare art forms through handcrafted masterpieces that 
-                transcend fashion trends. Our collective of 200+ master artisans and 
+                transcend fashion trends. Our collective of 100+ master artisans and 
                 designers create exclusive pieces that marry lyrical aesthetics with 
                 modern sensibilities.
               </p>
