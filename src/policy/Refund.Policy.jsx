@@ -99,26 +99,39 @@ const RefundPolicyPage = () => {
           />
 
           {/* Refund Policy */}
-          <PolicySection
-            icon={<CreditCardIcon className="h-8 w-8 text-gold-600" />}
-            title="Refund Policy"
-            content={
-              <div className="space-y-4">
-                <PolicyPoint 
-                  title="Refund Credits" 
-                  content="Refunds will be credited to your website/app wallet only after we receive and review your return parcel" 
-                />
-                <PolicyPoint 
-                  title="Full Order Returns" 
-                  content="Only complete orders can be returned. Partial returns are strictly not accepted" 
-                />
-                <PolicyPoint 
-                  title="Box Opening Video" 
-                  content="Mandatory video required to verify item condition for return processing" 
-                />
-              </div>
-            }
-          />
+          // In the Refund Policy section, update the content like this:
+
+<PolicySection
+  icon={<CreditCardIcon className="h-8 w-8 text-gold-600" />}
+  title="Refund Policy"
+  content={
+    <div className="space-y-4">
+      <PolicyPoint 
+        title="7-Day Refund Processing" 
+        content="All refunds will be processed within 7 business days after we receive and verify the returned items" 
+      />
+      <PolicyPoint 
+        title="Refund Credits" 
+        content="Refunds will be credited to your website/app wallet only after we receive and review your return parcel" 
+      />
+      <PolicyPoint 
+        title="Full Order Returns" 
+        content="Only complete orders can be returned. Partial returns are strictly not accepted" 
+      />
+      <PolicyPoint 
+        title="Box Opening Video" 
+        content="Mandatory video required to verify item condition for return processing" 
+      />
+    </div>
+  }
+/>
+
+// And in the Return Policies section, update the first PolicyPoint:
+
+<PolicyPoint 
+  title="7-Day Return Window" 
+  content="Returns must be initiated within 7 days of delivery date for eligibility" 
+/>
 
           {/* Shipping Charges */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
