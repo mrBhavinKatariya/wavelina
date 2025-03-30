@@ -4,6 +4,9 @@ import { FiHeart, FiStar, FiShoppingCart, FiChevronLeft, FiChevronRight,FiX } fr
 const JewelryWebsite = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+   const [cart, setCart] = useState([]);
+   const [showCart, setShowCart] = useState(false);
+
 
   // Sample products data
   const products = [
@@ -204,6 +207,19 @@ const JewelryWebsite = () => {
     );
   };
 
+  // Add to Cart function
+  const addToCart = (product) => {
+    setCart(prevCart => [...prevCart, product]);
+    setSelectedProduct(null); // Close the popup after adding to cart
+  };
+
+  const removeFromCart = (index) => {
+    setCart(prevCart => prevCart.filter((_, i) => i !== index));
+  };
+
+  const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
@@ -212,13 +228,74 @@ const JewelryWebsite = () => {
           <h1 className="text-2xl font-bold text-purple-600">Jewellery</h1>
           <div className="flex items-center gap-4">
             <FiHeart className="text-xl cursor-pointer" />
-            <FiShoppingCart className="text-xl cursor-pointer" />
+            <div className="relative">
+  <FiShoppingCart 
+    className="text-xl cursor-pointer" 
+    onClick={() => setShowCart(!showCart)} // यह लाइन जोड़ें
+  />
+  {cart.length > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+      {cart.length}
+    </span>
+  )}
+</div>
           </div>
         </div>
       </header>
-
  
 
+ {/* Cart Sidebar */}
+      {showCart && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
+          <div className="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-lg p-6 overflow-y-auto">
+            <div className="flex justify-between items-center mb-6">
+              <h2 className="text-2xl font-bold">Your Cart</h2>
+              <button 
+                onClick={() => setShowCart(false)}
+                className="text-gray-600 hover:text-purple-600"
+              >
+                <FiX className="text-2xl" />
+              </button>
+            </div>
+
+            {cart.length === 0 ? (
+              <p className="text-gray-500 text-center">Your cart is empty</p>
+            ) : (
+              <>
+                {cart.map((item, index) => (
+                  <div key={index} className="flex items-center gap-4 py-4 border-b">
+                    <img 
+                      src={item.images[0]} 
+                      alt={item.title}
+                      className="w-20 h-20 object-cover rounded"
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-semibold">{item.title}</h3>
+                      <p className="text-purple-600 font-bold">₹{item.price}</p>
+                    </div>
+                    <button 
+                      onClick={() => removeFromCart(index)}
+                      className="text-red-500 hover:text-red-700"
+                    >
+                      <FiX />
+                    </button>
+                  </div>
+                ))}
+
+                <div className="mt-6 pt-4 border-t">
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="font-bold">Total:</span>
+                    <span className="text-xl font-bold text-purple-600">₹{totalPrice}</span>
+                  </div>
+                  <button className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700">
+                    Checkout
+                  </button>
+                </div>
+              </>
+            )}
+             </div>
+        </div>
+      )}
 
 
       {/* Product Grid */}
@@ -334,7 +411,10 @@ const JewelryWebsite = () => {
               </div>
 
               <div className="flex gap-4">
-                <button className="flex-1 bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 flex items-center justify-center gap-2">
+              <button 
+                  className="flex-1 bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 flex items-center justify-center gap-2"
+                  onClick={() => addToCart(selectedProduct)}
+                >
                   <FiShoppingCart /> Add to Cart
                 </button>
                 <button className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-lg hover:bg-gray-300">
