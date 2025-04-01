@@ -86,8 +86,8 @@ const RefundPolicyPage = () => {
                 <div className="grid md:grid-cols-2 gap-4">
                   <DefinitionItem 
                     term="Company" 
-                    definition="Wavelina Jewellery,  88, MAA ANANDI TOWEN SHIP  DELADAVA GAM
-                       Surat  GUJARAT 394210" 
+                    definition="Wavelina Jewellery,  87, CHADRALOK SOCIETY   PARVAT GAM, PARVAT 
+                       Surat GUJARAT 395010" 
                   />
                   <DefinitionItem term="Goods" definition="Items offered for sale" />
                   <DefinitionItem term="Orders" definition="A request to purchase Goods from Us" />
