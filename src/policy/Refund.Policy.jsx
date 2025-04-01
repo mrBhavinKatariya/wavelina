@@ -219,8 +219,8 @@ const RefundPolicyPage = () => {
               </h2>
             </div>
             <address className="text-gray-600 not-italic leading-relaxed">
-            88, MAA ANANDI TOWEN SHIP <br/>  DELADAVA GAM <br/>
-            Surat <br/> GUJARAT 394210
+            87, CHADRALOK SOCIETY <br/>  PARVAT GAM, PARVAT  <br/>
+            Surat <br/> GUJARAT 395010
             </address>
           </motion.div>
 

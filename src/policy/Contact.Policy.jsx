@@ -79,8 +79,8 @@ const ContactPage = () => {
                     <h3 className="text-2xl font-cinzel font-bold text-gray-800">Visit Us</h3>
                     <p className="text-gray-600">
                      
-                      88, MAA ANANDI TOWEN SHIP <br/>  DELADAVA GAM <br/>
-                       Surat <br/> GUJARAT 394210
+                      87, CHADRALOK SOCIETY <br/>  PARVAT GAM, PARVAT  <br/>
+                       Surat <br/> GUJARAT 395010
                     </p>
                   </div>
                 </div>

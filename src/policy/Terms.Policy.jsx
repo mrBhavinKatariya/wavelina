@@ -82,7 +82,8 @@ const TermsOfUse = () => {
                 <div className="flex gap-3">
                   <FiMapPin className="text-amber-600 text-xl mt-1 flex-shrink-0" />
                   <address className="not-italic">
-                  88, MAA ANANDI TOWEN SHIP DELADAVA GAM Surat GUJARAT 394210
+                  87, CHADRALOK SOCIETY <br/>  PARVAT GAM, PARVAT  <br/>
+                  Surat <br/> GUJARAT 395010
                   </address>
                 </div>
               </div>
