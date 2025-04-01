@@ -99,7 +99,7 @@ const RefundPolicyPage = () => {
           />
 
           {/* Refund Policy */}
-          // In the Refund Policy section, update the content like this:
+      
 
 <PolicySection
   icon={<CreditCardIcon className="h-8 w-8 text-gold-600" />}
@@ -126,7 +126,7 @@ const RefundPolicyPage = () => {
   }
 />
 
-// And in the Return Policies section, update the first PolicyPoint:
+
 
 <PolicyPoint 
   title="7-Day Return Window" 
